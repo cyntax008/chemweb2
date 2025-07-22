@@ -20,7 +20,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Change to chemweb2 and install requirements
+        working-directory: chemweb2
         run: pip install -r requirements.txt
 
       - name: Zip artifact
