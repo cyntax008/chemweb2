@@ -29,8 +29,11 @@ jobs:
           python -m venv venv
           source venv/bin/activate
       
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - name: Change into app directory and install
+        run: |
+          cd chemweb2
+          pip install -r requirements.txt
+
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
